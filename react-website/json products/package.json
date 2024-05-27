@@ -1,0 +1,14 @@
+{
+  "name": "json-products",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yahya Mallak",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.0"
+  }
+}

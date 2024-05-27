@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Lenovo T470",
+      "price": "1500"
+    },
+    {
+      "id": "2",
+      "title": "Playstation 3",
+      "price": "200"
+    },
+    {
+      "id": "5",
+      "title": "Laptop ",
+      "price": "1000"
+    }
+  ]
+}
