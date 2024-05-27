@@ -2,7 +2,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <footer>Appy &copy; 2024</footer>
+    <footer>Appy &copy; {new Date().getFullYear()}</footer>
   )
 }
 

@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './DeleteProduct.css'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 function DeleteProduct() {
 
@@ -16,9 +18,9 @@ function DeleteProduct() {
   }
 
   return (
-    <div>
-      <h1>Product #{id} deletion :</h1>
-      <button onClick={deleteProduct}>Delete</button>
+    <div className='delete-products'>
+      <h2 className='title'>Product #{id} deletion :</h2>
+      <button onClick={deleteProduct}><FontAwesomeIcon icon="fa-solid fa-trash" /> Delete</button>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import axios from "axios" 
 import './Products.css'
 import { Link } from 'react-router-dom';
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 function Products() {
   
@@ -25,7 +25,7 @@ function Products() {
 
   return (
     <Fragment>
-      <h2>Products List : </h2>
+      <h2 className='title'><FontAwesomeIcon icon="fa-solid fa-list" /> Products List : </h2>
       <table className='products'>
         <thead>
           <tr>
@@ -41,9 +41,9 @@ function Products() {
                 <td>{product.id}</td>
                 <td>{product.title}</td>
                 <td>${product.price}</td>
-                <td>
-                  <Link to={`product/edit/${product.id}`}><button>Edit</button></Link>
-                  <Link to={`product/delete/${product.id}`}><button>Delete</button></Link>
+                <td className='actions'>
+                  <Link to={`product/edit/${product.id}`}><button className='edit-btn'><FontAwesomeIcon icon="fa-solid fa-pen-to-square" /> Edit</button></Link>
+                  <Link to={`product/delete/${product.id}`}><button className='delete-btn'><FontAwesomeIcon icon="fa-solid fa-trash" /> Delete</button></Link>
                 </td>
               </tr>
             )}

@@ -14,6 +14,16 @@
       "id": "5",
       "title": "Laptop ",
       "price": "1000"
+    },
+    {
+      "id": "3",
+      "title": "Samsung S3",
+      "price": "990"
+    },
+    {
+      "id": "4",
+      "title": "Iphone",
+      "price": "1200"
     }
   ]
 }

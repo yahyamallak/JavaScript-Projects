@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import './Header.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   return (
@@ -9,10 +10,10 @@ function Header() {
       </div>
       <nav>
         <ul>
-          <Link to="/">Products</Link>
-          <Link to="/product/add">Add product</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
+          <Link to="/"><FontAwesomeIcon icon="fa-solid fa-list" /> Products</Link>
+          <Link to="/product/add"><FontAwesomeIcon icon="fa-solid fa-square-plus" /> Add product</Link>
+          <Link to="/login"><FontAwesomeIcon icon="fa-solid fa-right-to-bracket" /> Login</Link>
+          <Link to="/register"><FontAwesomeIcon icon="fa-solid fa-user-plus" /> Register</Link>
         </ul>
       </nav>
     </header>

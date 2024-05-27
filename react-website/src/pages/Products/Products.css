@@ -1,3 +1,9 @@
+h2.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #546de5;
+}
+
 table.products{
     border: 1px solid #546de5;
     width: 80%;
@@ -17,5 +23,28 @@ table.products thead th{
 
 table.products tbody td{
     padding: 1rem;
+}
+
+table.products .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+table.products .edit-btn,
+table.products .delete-btn {
+    border: none;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+table.products .edit-btn{
+    background-color: #546de5;
+}
+
+table.products .delete-btn{
+    background-color: rgb(241, 0, 0);
 }
 

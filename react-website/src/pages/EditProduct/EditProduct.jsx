@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './EditProduct.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function EditProduct() {
 
@@ -49,11 +52,11 @@ function EditProduct() {
 
   return (
     <div className='edit-products'>
-      <h2>Edit product #{id} : </h2>
+      <h2 className='title'><FontAwesomeIcon icon="fa-regular fa-pen-to-square" /> Edit product #{id} : </h2>
       <input type="text" ref={productId} name='id' placeholder='ID...' defaultValue={product.id} />
       <input type="text" ref={productTitle} name='title' placeholder='Title...' defaultValue={product.title} />
       <input type="text" ref={productPrice} name='price' placeholder='Price...$' defaultValue={product.price} />
-      <button onClick={updateProduct}>Edit product</button>
+      <button onClick={updateProduct}><FontAwesomeIcon icon="fa-regular fa-pen-to-square" /> Edit product</button>
     </div>
   )
 }
