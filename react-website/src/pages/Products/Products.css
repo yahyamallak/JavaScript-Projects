@@ -8,6 +8,7 @@ table.products{
     border: 1px solid #546de5;
     width: 80%;
     margin: auto;
+    background-color: #fff;
 }
 
 td, tr {

@@ -11,11 +11,6 @@
       "price": "200"
     },
     {
-      "id": "5",
-      "title": "Laptop ",
-      "price": "1000"
-    },
-    {
       "id": "3",
       "title": "Samsung S3",
       "price": "990"
@@ -24,6 +19,14 @@
       "id": "4",
       "title": "Iphone",
       "price": "1200"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "yahya mallak",
+      "email": "yahya10mallak@gmail.com",
+      "password": "12345678"
     }
   ]
 }
