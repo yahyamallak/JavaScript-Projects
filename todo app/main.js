@@ -17,14 +17,22 @@ taskBtn.addEventListener("click",() => {
     }
 })
 
-function updateTodoList() {
+function updateTodoList(type = 'all') {
 
     tasks = getTasksFromLocalStorage()
     
     if(tasks.length > 0) {
         document.querySelector(".todo-list").innerHTML = ""
         tasks.forEach(task => {
-            document.querySelector(".todo-list").appendChild(createTask(task.id, task.text, task.completed))
+
+            if(type==='all') {
+                document.querySelector(".todo-list").appendChild(createTask(task.id, task.text, task.completed))
+            } else if(type === 'completed' && task.completed) {
+                document.querySelector(".todo-list").appendChild(createTask(task.id, task.text, task.completed))
+            } else if(type === 'uncompleted' && !task.completed) {
+                document.querySelector(".todo-list").appendChild(createTask(task.id, task.text, task.completed))
+            }
+
         })
     } else {
         document.querySelector(".todo-list").innerHTML = ""
@@ -132,3 +140,20 @@ function checkTask(taskId) {
 
     addTasksToLocalStorage(tasks)
 }
+
+
+const filter = document.querySelector(".filter")
+const filterList = document.querySelector("ul.filter-list")
+
+
+filter.addEventListener("click", function() {
+    filterList.classList.toggle("show")
+})
+
+
+filterList.querySelectorAll('li').forEach(li => {
+    li.addEventListener('click', function() {
+        filter.querySelector('.type').innerText = li.innerText
+        updateTodoList(li.dataset.type)
+    })
+});

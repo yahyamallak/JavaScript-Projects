@@ -11,9 +11,22 @@
 <body>
     <main>
         <h1>Todo App</h1>
-        <div class="todo-input">
-            <input id="task-input" type="text" placeholder="Enter your task...">
-            <button id="task-btn"><i class="fa-solid fa-plus"></i></button>
+        <div class="todo-header">
+            <div class="todo-input">
+                <input id="task-input" type="text" placeholder="Enter your task...">
+                <button id="task-btn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+    
+            <div class="filter">
+                <span class="type">All</span>
+                <i class="fa-solid fa-caret-down"></i>
+    
+                <ul class="filter-list">
+                    <li data-type="all">All</li>
+                    <li data-type="completed">Completed</li>
+                    <li data-type="uncompleted">Uncompleted</li>
+                </ul>
+            </div>
         </div>
 
         <ul class="todo-list">

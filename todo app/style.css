@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(90deg, #ea8685, #63cdda);
+    background-color:  #63cdda;
 }
 
 main {
@@ -25,12 +25,19 @@ main h1 {
     padding: 1rem;
 }
 
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 .todo-input {
     border-radius: 5px;
     padding: .4rem;
     display: flex;
     justify-content: space-between;
     background-color: white;
+    flex: 2;
 }
 
 .todo-input input{
@@ -44,7 +51,7 @@ main h1 {
     cursor: pointer;
     border: none;
     color: white;
-    background-color: #e66767;
+    background-color: #63cdda;
     border-radius: 5px;
 }
 
@@ -89,4 +96,41 @@ main h1 {
 
 .todo-list .task .buttons .delete{
     background-color: #e66767;
+}
+
+
+.filter {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: .4rem;
+    margin-top: 1rem;
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    flex: 1;
+}
+
+.filter ul.filter-list {
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 2rem;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+.filter ul.filter-list.show {
+    display: block;
+}
+
+.filter ul.filter-list li {
+    padding: .4rem;
+    cursor: pointer;
+}
+
+.filter ul.filter-list li:hover {
+    background-color: azure;
 }
