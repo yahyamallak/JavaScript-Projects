@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+ul.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 3px dashed #0C151C;
+    height: 500px;
+    border-radius: 1rem;
+    padding: 5px;
+}
+
+ul.list.dragging {
+    border-color: #74b9ff;
+}
+
+ul.list li.el {
+    background-color: #0C151C;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: grab;
+}
